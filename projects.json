@@ -1,99 +1,42 @@
-{
-  "projects": [
-    {
-      "title": "youtube_analytics_growth",
-      "emoji": "🎬",
-      "pitch": "Cómo escalé un canal a +100K suscriptores usando datos: CTR, retención, cohortes y A/B testing.",
-      "impact": "+70% CTR promedio y expansión internacional del canal binacional.",
-      "stack": [
-        "Python",
-        "Jupyter",
-        "Tableau"
-      ],
-      "tags": [
-        "youtube"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/youtube-analytics-growth",
-      "demo": ""
-    },
-    {
-      "title": "her2_market_insights_baja",
-      "emoji": "🧬",
-      "pitch": "Inteligencia de mercado HER2+ en Baja California: adopción por molécula y cobertura regional.",
-      "impact": "Detección de brechas y oportunidades de acceso en instituciones clave.",
-      "stack": [
-        "Python",
-        "SQL",
-        "Tableau"
-      ],
-      "tags": [
-        "pharma"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/her2-market-insights-baja",
-      "demo": ""
-    },
-    {
-      "title": "kpi_sales_pharma_dashboard",
-      "emoji": "⚙️",
-      "pitch": "KPIs que transforman equipos de ventas: eficiencia, cobertura y adopción con visualización clara.",
-      "impact": "Mayor visibilidad del desempeño comercial y foco en resultados.",
-      "stack": [
-        "Excel",
-        "Tableau",
-        "SQL básico"
-      ],
-      "tags": [
-        "pharma"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/kpi-sales-pharma-dashboard",
-      "demo": ""
-    },
-    {
-      "title": "ab_test_recommender_systems",
-      "emoji": "🧪",
-      "pitch": "Decisiones con evidencia: prueba Z y embudos para validar un sistema de recomendación.",
-      "impact": "Decisiones basadas en datos estadísticamente válidos (p<0.05).",
-      "stack": [
-        "Python",
-        "Pandas",
-        "Jupyter"
-      ],
-      "tags": [
-        "ab"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/ab-test-recommender-systems",
-      "demo": ""
-    },
-    {
-      "title": "CallMeMaybe_Operator_Efficiency",
-      "emoji": "☎️",
-      "pitch": "Eficiencia operativa en centros de atención: KPIs de espera, resolución y satisfacción.",
-      "impact": "Reducción del 22% en tiempos de espera y mejora de satisfacción.",
-      "stack": [
-        "Python",
-        "Tableau"
-      ],
-      "tags": [
-        "ops"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/CallMeMaybe_Operator_Efficiency",
-      "demo": ""
-    },
-    {
-      "title": "pharma_sales_sql_insights",
-      "emoji": "💊",
-      "pitch": "Análisis SQL de ventas HER2 y desempeño territorial para decisiones comerciales.",
-      "impact": "Priorización de recursos por institución y territorio.",
-      "stack": [
-        "SQL",
-        "Tableau",
-        "Excel"
-      ],
-      "tags": [
-        "pharma"
-      ],
-      "repo": "https://github.com/ednasanchez-analytics/pharma_sales_sql_insights",
-      "demo": ""
-    }
-  ]
-}
+[
+  {
+    "icon": "🎬",
+    "title": "YouTube Analytics Growth",
+    "description": "Data-driven YouTube analytics project showcasing growth strategies, KPI dashboards, and storytelling with data. Demo with synthetic datasets.",
+    "tech": "Python · Pandas · Matplotlib · Jupyter",
+    "category": "youtube",
+    "url": "https://github.com/ednasanchez-analytics/youtube-analytics-growth"
+  },
+  {
+    "icon": "🧬",
+    "title": "HER2 Market Insights (Baja)",
+    "description": "Oncology market analysis for HER2+ prescriptions and adoption trends in Baja California.",
+    "tech": "SQL · Python · Tableau · Jupyter",
+    "category": "pharma",
+    "url": "https://github.com/ednasanchez-analytics/her2-market-insights-baja"
+  },
+  {
+    "icon": "🧪",
+    "title": "A/B Test & Recommender Systems",
+    "description": "Experimental design and recommender systems focused on conversion rate optimization and engagement metrics.",
+    "tech": "Python · SciPy · Statsmodels · Jupyter",
+    "category": "ab",
+    "url": "https://github.com/ednasanchez-analytics/ab-test-recommender-systems"
+  },
+  {
+    "icon": "📚",
+    "title": "SQL Book Database Analysis",
+    "description": "SQL-based analysis of book publishing trends, author performance, and review behavior.",
+    "tech": "SQL · SQLite · Python · Jupyter",
+    "category": "sql",
+    "url": "https://github.com/ednasanchez-analytics/sql-book-database-analysis"
+  },
+  {
+    "icon": "☎️",
+    "title": "CallMeMaybe – Operator Efficiency",
+    "description": "Call center performance analytics: queue management, operator efficiency, and workload distribution.",
+    "tech": "Python · Pandas · NumPy · Matplotlib · Jupyter",
+    "category": "ops",
+    "url": "https://github.com/ednasanchez-analytics/CallMeMaybe_Operator_Efficiency"
+  }
+]
