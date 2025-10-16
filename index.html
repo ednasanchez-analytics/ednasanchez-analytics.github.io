@@ -1,71 +1,86 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edna Sánchez Woolfolk — Data · Story · Impact</title>
-  <meta name="description" content="Portafolio de Edna Sánchez Woolfolk: Data Analyst | Estrategia Comercial | Storytelling con Datos">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edna Sánchez Woolfolk | Strategic Data Analyst</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <h1>Edna Sánchez Woolfolk</h1>
-      <p>Data Analyst · Estrategia Comercial · Storytelling con Datos</p>
-      <p class="tagline">Transformo datos en decisiones que impulsan propósito y crecimiento real.</p>
-      <div class="cta">
-        <a class="btn" href="mailto:loredna@gmail.com">Contactar</a>
-        <a class="btn btn--ghost" href="https://github.com/ednasanchez-analytics" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/edna-lorenia-s-a96851239/" target="_blank" rel="noopener">LinkedIn</a>
+  <header>
+    <div class="intro">
+      <h1 class="title">MBA · Data Analytics Specialization · Strategic Data Analyst · Business Intelligence · Data Visualization & Storytelling</h1>
+      <h2 class="name">Edna Sánchez Woolfolk</h2>
+      <p class="pitch">
+        I help companies transform data into strategic clarity. With 10+ years of industry experience, I deliver insights that drive smarter decisions, operational efficiency, and business growth — combining storytelling, analytics, and deep industry knowledge. Specialized in pharma, BI, and digital strategy.
+      </p>
+      <div class="buttons">
+        <a href="mailto:loredna@gmail.com" class="btn">Email Me</a>
+        <a href="https://github.com/ednasanchez-analytics" class="btn">GitHub</a>
+        <a href="https://linkedin.com/in/edna-lorenia-s-a96851239" class="btn">LinkedIn</a>
+      </div>
+      <div style="margin-top: 10px;">
+        <a href="#projects" class="btn scroll">View Projects</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="about">
-      <h2>Mi historia</h2>
+      <h2>About Me</h2>
       <p>
-        Con más de una década en <b>Roche</b>, <b>Lilly</b> y hoy en <b>AstraZeneca</b> (oncología),
-        pasé de hacer análisis “rústicos” en Excel a formalizar mi práctica con
-        <b>Python</b>, <b>SQL</b>, <b>Tableau</b> y <b>Jupyter Notebook</b> (TripleTen). Sigo ampliando mi
-        enfoque con <b>Google Analytics</b>. Mi valor está en traducir datos en
-        <b>decisiones accionables</b> con contexto humano.
+        With over a decade of experience at <strong>Roche, Lilly</strong>, and now <strong>AstraZeneca</strong> (Oncology), I evolved from Excel-based reporting to leading analytics initiatives using <strong>Python, SQL, Tableau</strong>, and <strong>Jupyter Notebooks</strong>. I deliver actionable insights with a human context, helping organizations translate complexity into impact.
       </p>
     </section>
 
-    <section class="projects">
-      <div class="projects__header">
-        <h2>Proyectos</h2>
-        <div class="filters">
-          <button class="chip" data-filter="all">Todos</button>
-          <button class="chip" data-filter="pharma">Pharma</button>
-          <button class="chip" data-filter="youtube">YouTube</button>
-          <button class="chip" data-filter="ab">A/B Testing</button>
-          <button class="chip" data-filter="ops">Operaciones</button>
-        </div>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>🎬 YouTube Analytics Growth</h3>
+        <p>Data-driven YouTube analytics project showcasing growth strategies, KPI dashboards, and storytelling with data. Demo with synthetic datasets.</p>
+        <p><strong>Tools:</strong> Python · Pandas · Matplotlib · Jupyter</p>
       </div>
 
-      <div id="grid" class="grid">
-        <!-- Cards will be injected by script.js from projects.json -->
+      <div class="project-card">
+        <h3>🧬 HER2 Market Insights (Baja)</h3>
+        <p>Oncology market analysis for HER2+ prescriptions and adoption trends in Baja California.</p>
+        <p><strong>Tools:</strong> SQL · Python · Tableau · Jupyter</p>
+      </div>
+
+      <div class="project-card">
+        <h3>🧪 A/B Test & Recommender Systems</h3>
+        <p>Experimental design and recommender systems focused on conversion rate optimization and engagement metrics.</p>
+        <p><strong>Tools:</strong> Python · SciPy · Statsmodels · Jupyter</p>
+      </div>
+
+      <div class="project-card">
+        <h3>📚 SQL Book Database Analysis</h3>
+        <p>SQL-based analysis of book publishing trends, author performance, and review behavior.</p>
+        <p><strong>Tools:</strong> SQL · SQLite · Python · Jupyter</p>
+      </div>
+
+      <div class="project-card">
+        <h3>☎️ CallMeMaybe – Operator Efficiency</h3>
+        <p>Call center performance analytics: queue management, operator efficiency, and workload distribution.</p>
+        <p><strong>Tools:</strong> Python · Pandas · NumPy · Matplotlib · Jupyter</p>
       </div>
     </section>
 
     <section class="contact">
-      <h2>Contacto</h2>
+      <h2>Contact</h2>
       <ul>
-        <li>📍 Tijuana, México</li>
+        <li>📍 Tijuana, Mexico</li>
         <li>✉️ <a href="mailto:loredna@gmail.com">loredna@gmail.com</a></li>
-        <li>🔗 <a href="https://www.linkedin.com/in/edna-lorenia-s-a96851239/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li>💻 <a href="https://github.com/ednasanchez-analytics" target="_blank" rel="noopener">GitHub</a></li>
+        <li>🔗 <a href="https://linkedin.com/in/edna-lorenia-s-a96851239">LinkedIn</a></li>
+        <li>💻 <a href="https://github.com/ednasanchez-analytics">GitHub</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Edna Sánchez Woolfolk — Data · Story · Impact</p>
+    <p>© 2025 Edna Sánchez Woolfolk — Strategic Data Portfolio</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
