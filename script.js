@@ -1,42 +1,69 @@
+// script.js (reemplazo completo)
+(function () {
+  const grid = document.getElementById("grid");
+  const filterChips = document.querySelectorAll(".chip");
+  let allProjects = [];
 
-async function loadProjects(){
-  const res = await fetch('projects.json');
-  const data = await res.json();
-  const grid = document.getElementById('grid');
-  const create = (p) => {
-    const card = document.createElement('article');
-    card.className = 'card';
-    card.dataset.tags = p.tags.join(',');
-    card.innerHTML = `
-      <h3>${p.emoji} ${p.title}</h3>
-      <p>${p.pitch}</p>
-      <div class="badges">
-        ${p.stack.map(s => `<span class="badge">${s}</span>`).join('')}
-      </div>
-      <p class="meta">${p.impact}</p>
-      <div class="actions">
-        <a class="btn btn--ghost" href="${p.repo}" target="_blank" rel="noopener">Ver repo</a>
-        ${p.demo ? `<a class="btn" href="${p.demo}" target="_blank" rel="noopener">Demo</a>` : ''}
-      </div>
-    `;
+  function msg(text) {
+    if (!grid) return;
+    grid.innerHTML = `<p class="empty">${text}</p>`;
+  }
+
+  function createCard(project) {
+    const card = document.createElement("article");
+    card.className = "card";
+    const icon = `<div class="card__icon" aria-hidden="true">${project.icon || "📁"}</div>`;
+    const title = `<h3 class="card__title">${project.title}</h3>`;
+    const desc = `<p class="card__desc">${project.description || ""}</p>`;
+    const tech = project.tech ? `<p class="tech">${project.tech}</p>` : "";
+    const link = project.url ? `<a class="btn small" href="${project.url}" target="_blank" rel="noopener">🐙 View on GitHub</a>` : "";
+    card.innerHTML = `${icon}${title}${desc}${tech}${link}`;
     return card;
-  };
-  data.projects.forEach(p => grid.appendChild(create(p)));
+  }
 
-  // Filters
-  const chips = document.querySelectorAll('.chip');
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const f = chip.dataset.filter;
-      [...grid.children].forEach(card => {
-        if(f === 'all'){ card.style.display = ''; return; }
-        const tags = card.dataset.tags.split(',');
-        card.style.display = tags.includes(f) ? '' : 'none';
-      });
+  function render(list) {
+    if (!grid) return;
+    grid.innerHTML = "";
+    if (!Array.isArray(list) || !list.length) {
+      msg("No projects found. Check projects.json.");
+      return;
+    }
+    list.forEach(p => grid.appendChild(createCard(p)));
+  }
+
+  function setActiveChip(active) {
+    filterChips.forEach(chip => {
+      chip.classList.toggle("active", (chip.dataset.filter || chip.textContent.toLowerCase()) === active);
     });
+  }
+
+  function applyFilter(category) {
+    const list = category === "all" ? allProjects : allProjects.filter(p => (p.category || "").toLowerCase() === category);
+    render(list);
+    setActiveChip(category);
+  }
+
+  filterChips.forEach(chip => {
+    chip.addEventListener("click", () => applyFilter(chip.dataset.filter || chip.textContent.toLowerCase()));
   });
-  document.querySelector('.chip[data-filter="all"]').classList.add('active');
-}
-loadProjects();
+
+  // ⚠️ Cache-busting para GitHub Pages
+  const url = `projects.json?ts=${Date.now()}`;
+
+  fetch(url, { cache: "no-store" })
+    .then(r => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then(data => {
+      if (!Array.isArray(data)) throw new Error("projects.json must be a JSON array");
+      allProjects = data;
+      render(allProjects);
+      setActiveChip("all");
+      console.log(`Loaded ${allProjects.length} projects from projects.json`);
+    })
+    .catch(err => {
+      console.error("Error loading projects.json:", err);
+      msg("Couldn't load projects. Please refresh or validate projects.json.");
+    });
+})();
