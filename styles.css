@@ -1,0 +1,87 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #f1f1f1;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    background-color: #102331;
+}
+
+.main-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
+    color: #ccc;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1rem;
+    color: #eee;
+}
+
+.buttons {
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    margin: 0.3rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.email { background: #17a2b8; }
+.github { background: #333; }
+.linkedin { background: #0077b5; }
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+h3 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #17a2b8;
+    padding-bottom: 0.3rem;
+}
+
+#project-list {
+    margin-top: 1rem;
+}
+
+.project-card {
+    background: #1c2b3a;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    background-color: #0f2027;
+    color: #aaa;
+}
