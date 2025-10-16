@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+header h2 {
+    font-size: 20px;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+}
+
+header .name {
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+header .tagline {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.buttons {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background: #00c6ff;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #00b5e2;
+}
+
+.projects {
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.projects h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px 0;
+    color: #ccc;
+}
